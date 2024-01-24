@@ -1,3 +1,6 @@
+using System;
+using System.Collections;
+
 namespace DesafioPOO.Models
 {
     public abstract class Smartphone
@@ -26,5 +29,9 @@ namespace DesafioPOO.Models
         }
 
         public abstract void InstalarAplicativo(string nomeApp);
+
+        public abstract void ListarAplicativos();
+
+        public abstract void DesinstalarAplicativos(string nomeApp);
     }
 }
