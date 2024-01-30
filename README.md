@@ -1,7 +1,7 @@
 # Desafio de Projeto utilizando .NET e Programação Orientada a Objetos (POO)
 
 ## Objetivo
-Modelar um sistema que trabalha com celulares e disponibilze maneiras de diferentes marcas e modelos terem seu próprio comportamento, possibilitando um maior reuso de código e usando a orientação a objetos.
+Modelar um sistema que trabalha com celulares e disponibilize maneiras de diferentes marcas e modelos terem seu próprio comportamento, possibilitando um maior reuso de código e usando a orientação a objetos.
 
 ## Construção
 Foi criado um sistema em .NET, do tipo console, mapeando uma classe abstrata e classes específicas para dois tipos de celulares: Nokia e iPhone. 

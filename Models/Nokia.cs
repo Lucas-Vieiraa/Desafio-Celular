@@ -7,23 +7,32 @@ namespace DesafioPOO.Models
     {
         ArrayList lojaApp = new ArrayList();
 
+        public Nokia() : base() { }
+
         public Nokia(string numero, string modelo, string imei, int memoria) 
             : base(numero, modelo, imei, memoria)
         {
         }
 
+
         public override void InstalarAplicativo(string nomeApp)
         {
             Console.WriteLine($"Instalando {nomeApp}...");
-            Thread.Sleep(3000);
+            Console.WriteLine();
+            Thread.Sleep(2000);
             lojaApp.Add(nomeApp);
+            Console.WriteLine($"{nomeApp} Instalado");
+            Console.WriteLine();
         }
 
         public override void ListarAplicativos()
         {
+            Console.WriteLine("Aplicativos Instalados: ");
+            Console.WriteLine();
             foreach (var app in lojaApp)
             {
                 Console.WriteLine(app.ToString());
+
             }
         }
 
@@ -32,14 +41,17 @@ namespace DesafioPOO.Models
             if (lojaApp.Contains(nomeApp))
             {
                 Console.WriteLine($"Desinstalando {nomeApp}...");
-                Thread.Sleep(3000);
+                Console.WriteLine();
+                Thread.Sleep(2000);
                 lojaApp.Remove(nomeApp);
+                Console.WriteLine($"{nomeApp} Desinstalado");
             }
             else
             {
                 throw new Exception("Aplicativo  não encontrado");
-            }
 
+
+            }
         }
     }
 }

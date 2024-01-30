@@ -10,6 +10,9 @@ namespace DesafioPOO.Models
         private string IMEI { get; set; }
         private int Memoria { get; set; }
 
+
+        public Smartphone(){}
+
         public Smartphone(string numero, string modelo, string imei, int memoria)
         {
             Numero = numero;
@@ -18,9 +21,36 @@ namespace DesafioPOO.Models
             Memoria = memoria;
         }
 
+        public void NovoDispositivo()
+        {
+            Console.WriteLine("---------------------------");
+            Console.Write("Numero: ");
+            Numero = Console.ReadLine();
+            Console.Write("Modelo: ");
+            Modelo = Console.ReadLine();
+            Console.Write("IMEI: ");
+            IMEI = Console.ReadLine();
+            Console.Write("Memoria: ");
+            Memoria = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine("Novo Dispositivo Criado!");
+            Console.WriteLine("---------------------------");
+        }
+
+        public void ConfiguracoesDoDispositivo() 
+        {
+            Console.WriteLine(">>>>>>>>>>>>>>>>>>>>>>>>>>");
+            Console.WriteLine($"Configuração Do {Modelo}");
+            Console.WriteLine();
+            Console.WriteLine($"Numero: {Numero}");
+            Console.WriteLine($"IMEI: {IMEI}");
+            Console.WriteLine($"Memoria: {Memoria}");
+            Console.WriteLine("<<<<<<<<<<<<<<<<<<<<<<<<<<");
+        }
+
         public void Ligar()
         {
-            Console.WriteLine("Ligando...");
+            Console.WriteLine($"Ligando...");
         }
 
         public void ReceberLigacao()
